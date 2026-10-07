@@ -1,6 +1,8 @@
 import { profileData } from '../data/profile';
 import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
+import ContactForm from './ContactForm';
 import './Profile.css';
+
 
 function Profile() {
   return (
@@ -58,6 +60,7 @@ function Profile() {
 
       {/* Social Media & Contact Section */}
       <h3 id="contact" style={{ marginTop: '40px' }}>Connect with Me</h3>
+      <ContactForm />
       <div className="social-links">
         <a href={`mailto:${profileData.contact.email}`} title="Email" className="social-icon">
           <FaEnvelope />

@@ -1,9 +1,9 @@
 export const profileData = {
   name: "Porchelvan V",
-  title: "Frontend Developer",
+  title: "Data Analyst",
   bio: "Passionate about building clean and functional web applications.",
   resumeUrl: "/resume.pdf", // <--- Links directly to public/resume.pdf
-  skills: ["JavaScript", "React", "HTML/CSS", "Git"],
+  skills: ["Java", "Python", "Automation Testing", "Git"],
   contact: {
     email: "porchelvan2010@gmail.com",
     github: "https://github.com/vnkpchelvan",
