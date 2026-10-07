@@ -1,5 +1,5 @@
 import { profileData } from '../data/profile';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
 import './Profile.css';
 
 function Profile() {
@@ -8,6 +8,28 @@ function Profile() {
       <h1 className="profile-title">{profileData.name}</h1>
       <h2 className="profile-subtitle">{profileData.title}</h2>
       <p className="profile-bio">{profileData.bio}</p>
+
+      {/* Resume Download Button */}
+      <div style={{ marginBottom: '30px' }}>
+        <a 
+          href={profileData.resumeUrl} 
+          download="Porchelvan_Resume.pdf"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            backgroundColor: '#6366f1',
+            color: '#ffffff',
+            padding: '10px 20px',
+            borderRadius: '6px',
+            textDecoration: 'none',
+            fontWeight: '600',
+            fontSize: '14px'
+          }}
+        >
+          <FaDownload /> Download Resume
+        </a>
+      </div>
 
       {/* Skills Section */}
       <h3 id="skills">Skills</h3>
