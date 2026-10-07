@@ -20,6 +20,7 @@ function ContactForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
+      
 
       const data = await response.json();
 
@@ -32,6 +33,11 @@ function ContactForm() {
     } catch (error) {
       console.error('Fetch error:', error);
       setStatusMsg('Unable to connect to server. Is the backend running?');
+      const response = await fetch('https://porchelvan-portfolio-backend.onrender.com/api/contact', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(formData),
+});
     } finally {
       setLoading(false);
     }
